@@ -1,15 +1,6 @@
 <!--The content below is only a placeholder and can be replaced.-->
-<div style="padding: 20px 40px">
-<mat-card class="example-card">
-  <mat-card-header>
-    <mat-card-title>{{ cardTitle }}</mat-card-title>
-    <mat-card-subtitle>{{ cardSubtitle }}</mat-card-subtitle>
-  </mat-card-header>
-  <mat-card-content>
-    <p>{{ cardBody }}</p>
-  </mat-card-content>
-  <mat-card-footer></mat-card-footer>
-</mat-card>
+<div *ngFor="let rest of restaurants">
+  <app-rest-card [restaurants]="rest"></app-rest-card>
 </div>
 
 <router-outlet></router-outlet>

@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
+import {DUMMIES} from '../../models/Dummies';
 
 @Component({
   selector: 'app-rest-card',
@@ -6,8 +7,12 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./rest-card.component.scss']
 })
 export class RestCardComponent implements OnInit {
+  @Input() restaurants = DUMMIES;
+  now = new Date();
 
-  constructor() { }
+  constructor() {
+
+  }
 
   ngOnInit() {
   }

@@ -9,4 +9,11 @@ export class Restaurants {
   priceRange: number;
   reviews: Review[];
   location: Address[];
+  constructor(a?) {
+    this.name = a.name;
+    this.website = a.website;
+    this.phone = a.phone;
+    this.rating = a.rating;
+    this.priceRange = a.priceRange;
+  }
 }
