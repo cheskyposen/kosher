@@ -1,6 +1,8 @@
 <!--The content below is only a placeholder and can be replaced.-->
-<div *ngFor="let rest of restaurants">
-  <app-rest-card [restaurants]="rest"></app-rest-card>
-</div>
-
+<mat-toolbar>
+  <span>{{ title }}</span>
+</mat-toolbar>
+<main>
+  <app-restaurants></app-restaurants>
+</main>
 <router-outlet></router-outlet>

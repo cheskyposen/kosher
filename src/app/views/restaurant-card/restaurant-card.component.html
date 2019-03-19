@@ -1,0 +1,37 @@
+<mat-card class="example-card">
+  <mat-card-header>
+    <mat-card-title>{{ restaurant.name | uppercase }}</mat-card-title>
+    <mat-card-subtitle *ngIf="restaurant.phone">
+      <a href="tel:{{ restaurant.phone }}" target="_blank">{{ restaurant.phone }}</a>
+      <span>{{ restaurant.rating }}</span>
+    </mat-card-subtitle>
+  </mat-card-header>
+  <mat-card-content>
+    <div *ngIf="restaurant.location">
+      <p>
+        {{ restaurant.location.streetNumber }}
+        {{ restaurant.location.apartment }}
+        {{ restaurant.location.streetName }}
+        <br>
+        {{ restaurant.location.city }},
+        {{ restaurant.location.province }}
+        <br>
+        {{ restaurant.location.postalCode }}
+        {{ restaurant.location.country }}
+      </p>
+    </div>
+    <!--<div *ngIf="restaurant.reviews">
+      <p *ngFor="let review for restaurant.reviews">
+        {{ review.author }}<br>{{ review.rating }}
+        <br>
+        {{ review.title }}<br>{{ review.date }}<br>{{ review.body }}
+      </p>
+    </div>-->
+    <p>{{ restaurant.avgMealPrice }}</p>
+  </mat-card-content>
+  <mat-card-footer>
+    <p *ngIf="restaurant.website">
+      <a href="{{restaurant.website}}">{{ restaurant.name | lowercase }}</a>
+    </p>
+  </mat-card-footer>
+</mat-card>

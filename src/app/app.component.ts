@@ -1,5 +1,4 @@
 import {Component, OnInit} from '@angular/core';
-import {DUMMIES} from './models/Dummies';
 
 @Component({
   selector: 'app-root',
@@ -7,10 +6,7 @@ import {DUMMIES} from './models/Dummies';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent implements OnInit {
-  restaurants = DUMMIES;
-  /*title = 'kosher';*/
-
+  title = 'Kosher Restaurants';
   ngOnInit(): void {
-    /*this.cardTitle = 'WORD!!!';*/
   }
 }
