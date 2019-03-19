@@ -20,13 +20,13 @@
         {{ restaurant.location.country }}
       </p>
     </div>
-    <!--<div *ngIf="restaurant.reviews">
-      <p *ngFor="let review for restaurant.reviews">
+    <div *ngIf="restaurant.reviews">
+      <p *ngFor="let review of restaurant.reviews">
         {{ review.author }}<br>{{ review.rating }}
         <br>
         {{ review.title }}<br>{{ review.date }}<br>{{ review.body }}
       </p>
-    </div>-->
+    </div>
     <p>{{ restaurant.avgMealPrice }}</p>
   </mat-card-content>
   <mat-card-footer>
