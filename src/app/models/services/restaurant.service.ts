@@ -12,24 +12,35 @@ export class RestaurantService {
   constructor() {
     this.restaurants = [
       new Restaurant({
-        name: 'Mottel\'s Kitchen',
+        name: '5 Saisons Sushi',
         phone: '(514) 555-2019',
         website: 'https://www.teamviral.com',
         rating: 5,
         avgMealPrice: 20,
+        location: new Address({
+          streetNumber: 5594,
+          streetName: 'Sherbrooke St W',
+          city: 'Montreal',
+          province: 'QC',
+          postalCode: 'H4A 3A7',
+          country: 'Canada'
+        })
       }),
       new Restaurant({
-        name: 'Tav Cafe',
-        phone: '(514) 112-3581',
-        website: 'http://cafetav.com/',
-        rating: 3,
-        avgMealPrice: 15
-      }),
-      new Restaurant({
-        name: 'Pizza Pita',
-        phone: '(514) 234-1111',
-        rating: 4,
-        avgMealPrice: 18
+        name: 'Yakimono',
+        phone: '(514) 484-1515',
+        website: 'www.yakimono.ca',
+        rating: 5,
+        avgMealPrice: 50,
+        location: new Address({
+          streetNumber:  4210,
+          apartment: '1',
+          streetName: 'Decarie Blvd',
+          city: 'Montreal',
+          province: 'QC',
+          postalCode: 'H4A 3K3',
+          country: 'Canada'
+        })
       }),
       new Restaurant({
         name: 'Chops',
@@ -45,20 +56,17 @@ export class RestaurantService {
         })
       }),
       new Restaurant({
-        name: 'Yakimono',
-        phone: '(718) 781-0990',
-        website: 'https://www.google.com',
-        rating: 5,
-        avgMealPrice: 50,
-        location: new Address({
-          streetNumber: 221,
-          apartment: 'b',
-          streetName: 'Baker St.',
-          city: 'London',
-          province: 'ON',
-          postalCode: '1A2 B3C',
-          country: 'Canada'
-        })
+        name: 'Tav Cafe',
+        phone: '(514) 112-3581',
+        website: 'http://cafetav.com/',
+        rating: 3,
+        avgMealPrice: 15
+      }),
+      new Restaurant({
+        name: 'Pizza Pita',
+        phone: '(514) 234-1111',
+        rating: 4,
+        avgMealPrice: 18
       })
     ];
   }

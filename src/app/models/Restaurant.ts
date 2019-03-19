@@ -1,5 +1,6 @@
 import {Address} from './Address';
 import {Review} from './Review';
+import {LogsService} from '../controllers/logs.service';
 
 export class Restaurant {
   name: string;
@@ -9,6 +10,7 @@ export class Restaurant {
   avgMealPrice: number;
   reviews: Review[];
   location: Address;
+  logs = new LogsService();
 
   constructor(args?) {
     if (args) {
@@ -20,5 +22,6 @@ export class Restaurant {
       this.reviews = args.reviews;
       this.location = args.location;
     }
+    this.logs.log('Restaurant');
   }
 }

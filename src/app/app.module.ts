@@ -13,6 +13,7 @@ import { MatDividerModule } from '@angular/material/divider';
 
 import { RestaurantsComponent } from './views/restaurants/restaurants.component';
 import { RestaurantCardComponent } from './views/restaurant-card/restaurant-card.component';
+import {LogsService} from './controllers/logs.service';
 
 @NgModule({
   declarations: [
@@ -31,7 +32,7 @@ import { RestaurantCardComponent } from './views/restaurant-card/restaurant-card
     MatDividerModule,
     CommonModule
   ],
-  providers: [],
+  providers: [LogsService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
